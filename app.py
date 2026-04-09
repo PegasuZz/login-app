@@ -14,7 +14,8 @@ def setup():
     database.init_db()
 
 @app.route("/", methods=["GET", "POST"])                                                                                                                                                                                                                                    
-def login():                                                                                                                                                                                                                                                                
+def login():                                                  
+    error = None                                                                                                                                                                                                                        
     if "username" in session:                                                                                                                                                                                                                                                   
         return redirect(url_for("dashboard"))              
     if request.method == "POST":                                                                                                                                                                                                                                                
